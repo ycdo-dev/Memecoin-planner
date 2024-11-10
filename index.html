@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Coin Project Planner</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .phase-card {
+            transition: all 0.3s ease;
+        }
+        .phase-card:hover {
+            transform: translateY(-5px);
+        }
+        .progress-bar {
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-gradient-to-r from-purple-600 to-blue-500 text-white py-12">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold mb-4"><center>Solana Meme Coin Project Planner</h1>
+            <p class="text-xl opacity-90"><center>Complete roadmap and planning tool for your Solana meme coin launch</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Progress Tracker -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4">Project Progress</h2>
+            <div class="bg-gray-200 rounded-full h-4 mb-2">
+                <div id="progressBar" class="progress-bar bg-blue-500 rounded-full h-4" style="width: 0%"></div>
+            </div>
+            <div class="flex justify-between text-sm text-gray-600">
+                <span>Planning</span>
+                <span>Development</span>
+                <span>Launch</span>
+                <span>Growth</span>
+            </div>
+        </div>
+
+        <!-- Phase Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Phase 1: Pre-Launch -->
+            <div class="phase-card bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-bold mb-4 text-purple-600">Phase 1: Pre-Launch (1-2 weeks)</h3>
+                <div class="space-y-2">
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-purple-600" onchange="updateProgress()">
+                        <span class="ml-2">Create Phantom Wallet</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-purple-600" onchange="updateProgress()">
+                        <span class="ml-2">Install Solana CLI Tools</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-purple-600" onchange="updateProgress()">
+                        <span class="ml-2">Design Logo & Branding</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-purple-600" onchange="updateProgress()">
+                        <span class="ml-2">Create Website</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Phase 2: Token Creation -->
+            <div class="phase-card bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-bold mb-4 text-blue-600">Phase 2: Token Creation (1 week)</h3>
+                <div class="space-y-2">
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-blue-600" onchange="updateProgress()">
+                        <span class="ml-2">Define Tokenomics</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-blue-600" onchange="updateProgress()">
+                        <span class="ml-2">Create SPL Token</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-blue-600" onchange="updateProgress()">
+                        <span class="ml-2">Mint Initial Supply</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-blue-600" onchange="updateProgress()">
+                        <span class="ml-2">Set Up Token Distribution</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Phase 3: Liquidity Setup -->
+            <div class="phase-card bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-bold mb-4 text-green-600">Phase 3: Liquidity (1-2 days)</h3>
+                <div class="space-y-2">
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-green-600" onchange="updateProgress()">
+                        <span class="ml-2">Prepare Liquidity Pool</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-green-600" onchange="updateProgress()">
+                        <span class="ml-2">Add Liquidity on Raydium</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-green-600" onchange="updateProgress()">
+                        <span class="ml-2">Lock Liquidity</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-green-600" onchange="updateProgress()">
+                        <span class="ml-2">Create Trading Pairs</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Phase 4: Community Building -->
+            <div class="phase-card bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-bold mb-4 text-red-600">Phase 4: Community (1 week)</h3>
+                <div class="space-y-2">
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-red-600" onchange="updateProgress()">
+                        <span class="ml-2">Create Social Media Accounts</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-red-600" onchange="updateProgress()">
+                        <span class="ml-2">Set Up Telegram/Discord</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-red-600" onchange="updateProgress()">
+                        <span class="ml-2">Create Content Calendar</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-red-600" onchange="updateProgress()">
+                        <span class="ml-2">Prepare Marketing Materials</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Phase 5: Launch -->
+            <div class="phase-card bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-bold mb-4 text-yellow-600">Phase 5: Launch Day</h3>
+                <div class="space-y-2">
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-yellow-600" onchange="updateProgress()">
+                        <span class="ml-2">Final Contract Check</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-yellow-600" onchange="updateProgress()">
+                        <span class="ml-2">Launch Announcement</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-yellow-600" onchange="updateProgress()">
+                        <span class="ml-2">Community AMA</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-yellow-600" onchange="updateProgress()">
+                        <span class="ml-2">Monitor Trading Activity</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Phase 6: Post-Launch -->
+            <div class="phase-card bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-bold mb-4 text-indigo-600">Phase 6: Post-Launch (1-2 weeks)</h3>
+                <div class="space-y-2">
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-indigo-600" onchange="updateProgress()">
+                        <span class="ml-2">List on DEX Trackers</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-indigo-600" onchange="updateProgress()">
+                        <span class="ml-2">Implement Staking</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-indigo-600" onchange="updateProgress()">
+                        <span class="ml-2">Launch NFT Collection</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox text-indigo-600" onchange="updateProgress()">
+                        <span class="ml-2">Set Up Farming</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Budget Calculator -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mt-8">
+            <h2 class="text-2xl font-bold mb-4">Budget Calculator</h2>
+            <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                <h3 class="text-lg font-semibold mb-2">Current SOL Price: $<span id="solPrice">0.00</span></h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-700 mb-2">Liquidity (SOL)</label>
+                    <input type="number" id="liquidityInput" class="w-full p-2 border rounded" value="50" min="0">
+                    <p class="text-sm text-gray-600 mt-1">≈ $<span id="liquidityUSDT">0.00</span></p>
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Marketing (SOL)</label>
+                    <input type="number" id="marketingInput" class="w-full p-2 border rounded" value="20" min="0">
+                    <p class="text-sm text-gray-600 mt-1">≈ $<span id="marketingUSDT">0.00</span></p>
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Development (SOL)</label>
+                    <input type="number" id="developmentInput" class="w-full p-2 border rounded" value="10" min="0">
+                    <p class="text-sm text-gray-600 mt-1">≈ $<span id="developmentUSDT">0.00</span></p>
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Contingency (SOL)</label>
+                    <input type="number" id="contingencyInput" class="w-full p-2 border rounded" value="10" min="0">
+                    <p class="text-sm text-gray-600 mt-1">≈ $<span id="contingencyUSDT">0.00</span></p>
+                </div>
+            </div>
+            <div class="mt-4 pt-4 border-t">
+                <h3 class="text-xl font-bold">Total Budget: 
+                    <span id="totalBudget" class="text-purple-600">90</span> SOL 
+                    <span class="text-gray-600">(≈ $<span id="totalUSDT">0.00</span>)</span>
+                </h3>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>Solana Meme Coin Project Planner</p>
+            <p class="text-gray-400 mt-2">Always DYOR (Do Your Own Research)</p>
+        </div>
+    </footer>
+
+    <script>
+        async function getSOLPrice() {
+            try {
+                const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd');
+                const data = await response.json();
+                return data.solana.usd;
+            } catch (error) {
+                console.error('Error fetching SOL price:', error);
+                return null;
+            }
+        }
+
+        function updateProgress() {
+            const totalCheckboxes = document.querySelectorAll('input[type="checkbox"]').length;
+            const checkedCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked').length;
+            const progress = (checkedCheckboxes / totalCheckboxes) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+        }
+
+        async function updatePrices() {
+            const solPrice = await getSOLPrice();
+            if (solPrice) {
+                document.getElementById('solPrice').textContent = solPrice.toFixed(2);
+                calculateTotal();
+            }
+        }
+
+        function updateIndividualPrice(inputId, displayId) {
+            const solPrice = parseFloat(document.getElementById('solPrice').textContent) || 0;
+            const solAmount = parseFloat(document.getElementById(inputId).value) || 0;
+            const usdtAmount = solAmount * solPrice;
+            document.getElementById(displayId).textContent = usdtAmount.toFixed(2);
+        }
+
+        function calculateTotal() {
+            const solPrice = parseFloat(document.getElementById('solPrice').textContent) || 0;
+            const liquidity = parseFloat(document.getElementById('liquidityInput').value) || 0;
+            const marketing = parseFloat(document.getElementById('marketingInput').value) || 0;
+            const development = parseFloat(document.getElementById('developmentInput').value) || 0;
+            const contingency = parseFloat(document.getElementById('contingencyInput').value) || 0;
+            
+            const totalSOL = liquidity + marketing + development + contingency;
+            const totalUSDT = totalSOL * solPrice;
+            
+            document.getElementById('totalBudget').textContent = totalSOL;
+            document.getElementById('totalUSDT').textContent = totalUSDT.toFixed(2);
+            
+            // Update individual USDT values
+            updateIndividualPrice('liquidityInput', 'liquidityUSDT');
+            updateIndividualPrice('marketingInput', 'marketingUSDT');
+            updateIndividualPrice('developmentInput', 'developmentUSDT');
+            updateIndividualPrice('contingencyInput', 'contingencyUSDT');
+        }
+
+        // Add event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputs = ['liquidityInput', 'marketingInput', 'developmentInput', 'contingencyInput'];
+            
+            inputs.forEach(inputId => {
+                document.getElementById(inputId).addEventListener('input', calculateTotal);
+            });
+
+            // Initial update
+            updatePrices();
+
+            // Update prices every 30 seconds
+            setInterval(updatePrices, 30000);
+        });
+  </script>
+</body>
+</html>
