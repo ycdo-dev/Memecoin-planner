@@ -40,147 +40,357 @@
             </div>
         </div>
 
-        <!-- Phase Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Phase 1: Pre-Launch -->
-            <div class="phase-card bg-white rounded-lg shadow-lg p-6">
-                <h3 class="text-xl font-bold mb-4 text-purple-600">Phase 1: Pre-Launch (1-2 weeks)</h3>
-                <div class="space-y-2">
-                    <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox text-purple-600" onchange="updateProgress()">
-                        <span class="ml-2">Create Phantom Wallet</span>
-                    </label>
-                    <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox text-purple-600" onchange="updateProgress()">
-                        <span class="ml-2">Install Solana CLI Tools</span>
-                    </label>
-                    <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox text-purple-600" onchange="updateProgress()">
-                        <span class="ml-2">Design Logo & Branding</span>
-                    </label>
-                    <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox text-purple-600" onchange="updateProgress()">
-                        <span class="ml-2">Create Website</span>
-                    </label>
-                </div>
-            </div>
+        <!-- ផ្នែកដែលត្រូវកែប្រែនៅក្នុង Phase Cards -->
 
-            <!-- Phase 2: Token Creation -->
-            <div class="phase-card bg-white rounded-lg shadow-lg p-6">
-                <h3 class="text-xl font-bold mb-4 text-blue-600">Phase 2: Token Creation (1 week)</h3>
-                <div class="space-y-2">
-                    <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox text-blue-600" onchange="updateProgress()">
-                        <span class="ml-2">Define Tokenomics</span>
-                    </label>
-                    <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox text-blue-600" onchange="updateProgress()">
-                        <span class="ml-2">Create SPL Token</span>
-                    </label>
-                    <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox text-blue-600" onchange="updateProgress()">
-                        <span class="ml-2">Mint Initial Supply</span>
-                    </label>
-                    <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox text-blue-600" onchange="updateProgress()">
-                        <span class="ml-2">Set Up Token Distribution</span>
-                    </label>
-                </div>
-            </div>
+<!-- Phase 1: Pre-Launch -->
+<div class="phase-card bg-white rounded-lg shadow-lg p-6">
+    <h3 class="text-xl font-bold mb-4 text-purple-600">ដំណាក់កាលទី១: មុនចាប់ផ្តើម (១-២សប្តាហ៍)</h3>
+    
+    <h4 class="text-lg font-semibold mb-2 text-purple-600">ក. ការរៀបចំបច្ចេកទេស:</h4>
+    <div class="space-y-2 mb-4">
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-purple-600" onchange="updateProgress()">
+            <span class="ml-2">បង្កើត Phantom Wallet</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-purple-600" onchange="updateProgress()">
+            <span class="ml-2">Install Solana CLI Tools</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-purple-600" onchange="updateProgress()">
+            <span class="ml-2">រៀបចំ Development Environment</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-purple-600" onchange="updateProgress()">
+            <span class="ml-2">ទិញ SOL សម្រាប់ចំណាយ</span>
+        </label>
+    </div>
 
-            <!-- Phase 3: Liquidity Setup -->
-            <div class="phase-card bg-white rounded-lg shadow-lg p-6">
-                <h3 class="text-xl font-bold mb-4 text-green-600">Phase 3: Liquidity (1-2 days)</h3>
-                <div class="space-y-2">
-                    <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox text-green-600" onchange="updateProgress()">
-                        <span class="ml-2">Prepare Liquidity Pool</span>
-                    </label>
-                    <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox text-green-600" onchange="updateProgress()">
-                        <span class="ml-2">Add Liquidity on Raydium</span>
-                    </label>
-                    <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox text-green-600" onchange="updateProgress()">
-                        <span class="ml-2">Lock Liquidity</span>
-                    </label>
-                    <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox text-green-600" onchange="updateProgress()">
-                        <span class="ml-2">Create Trading Pairs</span>
-                    </label>
-                </div>
-            </div>
+    <h4 class="text-lg font-semibold mb-2 text-purple-600">ខ. ការរៀបចំ Brand:</h4>
+    <div class="space-y-2">
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-purple-600" onchange="updateProgress()">
+            <span class="ml-2">បង្កើតឈ្មោះនិងរូបសញ្ញា</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-purple-600" onchange="updateProgress()">
+            <span class="ml-2">រចនា Logo និង Banner</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-purple-600" onchange="updateProgress()">
+            <span class="ml-2">បង្កើត Website សាមញ្ញ</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-purple-600" onchange="updateProgress()">
+            <span class="ml-2">សរសេរ Whitepaper ខ្លី</span>
+        </label>
+    </div>
+</div>
 
-            <!-- Phase 4: Community Building -->
-            <div class="phase-card bg-white rounded-lg shadow-lg p-6">
-                <h3 class="text-xl font-bold mb-4 text-red-600">Phase 4: Community (1 week)</h3>
-                <div class="space-y-2">
-                    <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox text-red-600" onchange="updateProgress()">
-                        <span class="ml-2">Create Social Media Accounts</span>
-                    </label>
-                    <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox text-red-600" onchange="updateProgress()">
-                        <span class="ml-2">Set Up Telegram/Discord</span>
-                    </label>
-                    <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox text-red-600" onchange="updateProgress()">
-                        <span class="ml-2">Create Content Calendar</span>
-                    </label>
-                    <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox text-red-600" onchange="updateProgress()">
-                        <span class="ml-2">Prepare Marketing Materials</span>
-                    </label>
-                </div>
-            </div>
+<!-- Phase 2: Token Creation -->
+<div class="phase-card bg-white rounded-lg shadow-lg p-6">
+    <h3 class="text-xl font-bold mb-4 text-blue-600">ដំណាក់កាលទី២: ការបង្កើត Token (១សប្តាហ៍)</h3>
+    
+    <h4 class="text-lg font-semibold mb-2 text-blue-600">ក. Tokenomics:</h4>
+    <div class="space-y-2 mb-4">
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-blue-600" onchange="updateProgress()">
+            <span class="ml-2">កំណត់ Total Supply: 1,000,000,000</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-blue-600" onchange="updateProgress()">
+            <span class="ml-2">Liquidity Pool: 85%</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-blue-600" onchange="updateProgress()">
+            <span class="ml-2">Marketing: 8%</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-blue-600" onchange="updateProgress()">
+            <span class="ml-2">Team: 5%, Airdrop: 2%</span>
+        </label>
+    </div>
 
-            <!-- Phase 5: Launch -->
-            <div class="phase-card bg-white rounded-lg shadow-lg p-6">
-                <h3 class="text-xl font-bold mb-4 text-yellow-600">Phase 5: Launch Day</h3>
-                <div class="space-y-2">
-                    <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox text-yellow-600" onchange="updateProgress()">
-                        <span class="ml-2">Final Contract Check</span>
-                    </label>
-                    <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox text-yellow-600" onchange="updateProgress()">
-                        <span class="ml-2">Launch Announcement</span>
-                    </label>
-                    <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox text-yellow-600" onchange="updateProgress()">
-                        <span class="ml-2">Community AMA</span>
-                    </label>
-                    <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox text-yellow-600" onchange="updateProgress()">
-                        <span class="ml-2">Monitor Trading Activity</span>
-                    </label>
-                </div>
-            </div>
+    <h4 class="text-lg font-semibold mb-2 text-blue-600">ខ. បង្កើត SPL Token:</h4>
+    <div class="space-y-2">
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-blue-600" onchange="updateProgress()">
+            <span class="ml-2">spl-token create-token</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-blue-600" onchange="updateProgress()">
+            <span class="ml-2">spl-token create-account</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-blue-600" onchange="updateProgress()">
+            <span class="ml-2">spl-token mint</span>
+        </label>
+    </div>
+</div>
 
-            <!-- Phase 6: Post-Launch -->
-            <div class="phase-card bg-white rounded-lg shadow-lg p-6">
-                <h3 class="text-xl font-bold mb-4 text-indigo-600">Phase 6: Post-Launch (1-2 weeks)</h3>
-                <div class="space-y-2">
-                    <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox text-indigo-600" onchange="updateProgress()">
-                        <span class="ml-2">List on DEX Trackers</span>
-                    </label>
-                    <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox text-indigo-600" onchange="updateProgress()">
-                        <span class="ml-2">Implement Staking</span>
-                    </label>
-                    <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox text-indigo-600" onchange="updateProgress()">
-                        <span class="ml-2">Launch NFT Collection</span>
-                    </label>
-                    <label class="flex items-center">
-                        <input type="checkbox" class="form-checkbox text-indigo-600" onchange="updateProgress()">
-                        <span class="ml-2">Set Up Farming</span>
-                    </label>
-                </div>
-            </div>
+<!-- Phase 3: Liquidity Setup -->
+<div class="phase-card bg-white rounded-lg shadow-lg p-6">
+    <h3 class="text-xl font-bold mb-4 text-green-600">ដំណាក់កាលទី៣: ការដាក់ Liquidity (១-២ថ្ងៃ)</h3>
+    
+    <h4 class="text-lg font-semibold mb-2 text-green-600">ក. ការត្រៀម Liquidity:</h4>
+    <div class="space-y-2 mb-4">
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-green-600" onchange="updateProgress()">
+            <span class="ml-2">រៀបចំ SOL: 50-100 SOL</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-green-600" onchange="updateProgress()">
+            <span class="ml-2">រៀបចំ Token: 85% នៃ Supply</span>
+        </label>
+    </div>
+
+    <h4 class="text-lg font-semibold mb-2 text-green-600">ខ. ដំណើរការ:</h4>
+    <div class="space-y-2">
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-green-600" onchange="updateProgress()">
+            <span class="ml-2">Add Liquidity លើ Raydium</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-green-600" onchange="updateProgress()">
+            <span class="ml-2">Lock Liquidity រយៈពេល ១ឆ្នាំ</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-green-600" onchange="updateProgress()">
+            <span class="ml-2">បង្កើតគូជួញដូរ Token/SOL</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-green-600" onchange="updateProgress()">
+            <span class="ml-2">បង្កើតគូជួញដូរ Token/USDC</span>
+        </label>
+    </div>
+</div>
+
+<!-- Phase 4: Community Building -->
+<div class="phase-card bg-white rounded-lg shadow-lg p-6">
+    <h3 class="text-xl font-bold mb-4 text-red-600">ដំណាក់កាលទី៤: ការបង្កើតសហគមន៍ (១សប្តាហ៍)</h3>
+    
+    <h4 class="text-lg font-semibold mb-2 text-red-600">ក. បង្កើតគណនីផ្លូវការ:</h4>
+    <div class="space-y-2 mb-4">
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-red-600" onchange="updateProgress()">
+            <span class="ml-2">Twitter Account</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-red-600" onchange="updateProgress()">
+            <span class="ml-2">Telegram Group & Channel</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-red-600" onchange="updateProgress()">
+            <span class="ml-2">Discord Server</span>
+        </label>
+    </div>
+
+    <h4 class="text-lg font-semibold mb-2 text-red-600">ខ. រៀបចំ Content:</h4>
+    <div class="space-y-2">
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-red-600" onchange="updateProgress()">
+            <span class="ml-2">Memes ប្រចាំថ្ងៃ</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-red-600" onchange="updateProgress()">
+            <span class="ml-2">Infographics និង Tutorial Videos</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-red-600" onchange="updateProgress()">
+            <span class="ml-2">Project Updates</span>
+        </label>
+    </div>
+</div>
+
+<!-- Phase 5: Launch -->
+<div class="phase-card bg-white rounded-lg shadow-lg p-6">
+    <h3 class="text-xl font-bold mb-4 text-yellow-600">ដំណាក់កាលទី៥: ថ្ងៃដាក់លក់ (Launch Day)</h3>
+    
+    <h4 class="text-lg font-semibold mb-2 text-yellow-600">ក. មុនពេលដាក់លក់:</h4>
+    <div class="space-y-2 mb-4">
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-yellow-600" onchange="updateProgress()">
+            <span class="ml-2">ត្រួតពិនិត្យ Liquidity</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-yellow-600" onchange="updateProgress()">
+            <span class="ml-2">ពិនិត្យ Smart Contract</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-yellow-600" onchange="updateProgress()">
+            <span class="ml-2">រៀបចំ Marketing Materials</span>
+        </label>
+    </div>
+
+    <h4 class="text-lg font-semibold mb-2 text-yellow-600">ខ. ពេលដាក់លក់:</h4>
+    <div class="space-y-2">
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-yellow-600" onchange="updateProgress()">
+            <span class="ml-2">ប្រកាសពេលវេលាច្បាស់លាស់</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-yellow-600" onchange="updateProgress()">
+            <span class="ml-2">ធ្វើ Voice Chat ក្នុង Telegram</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-yellow-600" onchange="updateProgress()">
+            <span class="ml-2">តាមដានតម្លៃនិងការជួញដូរ</span>
+        </label>
+    </div>
+</div>
+
+<!-- Phase 6: Post-Launch -->
+<div class="phase-card bg-white rounded-lg shadow-lg p-6">
+    <h3 class="text-xl font-bold mb-4 text-indigo-600">ដំណាក់កាលទី៦: ក្រោយដាក់លក់ (១-២សប្តាហ៍)</h3>
+    
+    <h4 class="text-lg font-semibold mb-2 text-indigo-600">ក. ការចុះបញ្ជី:</h4>
+    <div class="space-y-2 mb-4">
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-indigo-600" onchange="updateProgress()">
+            <span class="ml-2">Dexscreener</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-indigo-600" onchange="updateProgress()">
+            <span class="ml-2">Birdeye</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-indigo-600" onchange="updateProgress()">
+            <span class="ml-2">CoinGecko (ពេលគ្រប់លក្ខខណ្ឌ)</span>
+        </label>
+    </div>
+
+    <h4 class="text-lg font-semibold mb-2 text-indigo-600">ខ. ការបង្កើនតម្លៃ Project:</h4>
+    <div class="space-y-2">
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-indigo-600" onchange="updateProgress()">
+            <span class="ml-2">ដាក់ Staking Program</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-indigo-600" onchange="updateProgress()">
+            <span class="ml-2">បង្កើត NFT Collection</span>
+        </label>
+        <label class="flex items-center">
+                <input type="checkbox" class="form-checkbox text-indigo-600" onchange="updateProgress()">
+                <span class="ml-2">ធ្វើ Raydium Farming</span>
+            </label>
+            <label class="flex items-center">
+                <input type="checkbox" class="form-checkbox text-indigo-600" onchange="updateProgress()">
+                <span class="ml-2">បង្កើត DAO សម្រាប់សហគមន៍</span>
+            </label>
         </div>
+    </div>
+</div>
 
+<!-- Phase 7: Marketing & Growth -->
+<div class="phase-card bg-white rounded-lg shadow-lg p-6">
+    <h3 class="text-xl font-bold mb-4 text-pink-600">ដំណាក់កាលទី៧: ការផ្សព្វផ្សាយ និងការរីកចម្រើន</h3>
+    
+    <h4 class="text-lg font-semibold mb-2 text-pink-600">ក. Twitter Campaign:</h4>
+    <div class="space-y-2 mb-4">
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-pink-600" onchange="updateProgress()">
+            <span class="ml-2">សហការជាមួយ Crypto Influencers</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-pink-600" onchange="updateProgress()">
+            <span class="ml-2">ធ្វើ Giveaway កម្មវិធី</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-pink-600" onchange="updateProgress()">
+            <span class="ml-2">បង្កើត Hashtag ផ្ទាល់ខ្លួន</span>
+        </label>
+    </div>
+
+    <h4 class="text-lg font-semibold mb-2 text-pink-600">ខ. Telegram Marketing:</h4>
+    <div class="space-y-2">
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-pink-600" onchange="updateProgress()">
+            <span class="ml-2">ចូល Solana Groups ផ្សេងៗ</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-pink-600" onchange="updateProgress()">
+            <span class="ml-2">ដាក់ AMA Sessions</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-pink-600" onchange="updateProgress()">
+            <span class="ml-2">ធ្វើ Shilling Campaign</span>
+        </label>
+    </div>
+</div>
+
+<!-- Phase 8: Long-term Development -->
+<div class="phase-card bg-white rounded-lg shadow-lg p-6">
+    <h3 class="text-xl font-bold mb-4 text-cyan-600">ដំណាក់កាលទី៨: ការអភិវឌ្ឍន៍រយៈពេលវែង</h3>
+    
+    <h4 class="text-lg font-semibold mb-2 text-cyan-600">ក. ការអភិវឌ្ឍន៍:</h4>
+    <div class="space-y-2 mb-4">
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-cyan-600" onchange="updateProgress()">
+            <span class="ml-2">បង្កើត Utility ថ្មីៗ</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-cyan-600" onchange="updateProgress()">
+            <span class="ml-2">សហការជាមួយ Projects ផ្សេងៗ</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-cyan-600" onchange="updateProgress()">
+            <span class="ml-2">ពង្រីកទៅកាន់បណ្តាញផ្សេងៗ</span>
+        </label>
+    </div>
+
+    <h4 class="text-lg font-semibold mb-2 text-cyan-600">ខ. ការថែរក្សា:</h4>
+    <div class="space-y-2">
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-cyan-600" onchange="updateProgress()">
+            <span class="ml-2">បន្តធ្វើ Marketing</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-cyan-600" onchange="updateProgress()">
+            <span class="ml-2">រក្សាសហគមន៍សកម្ម</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-cyan-600" onchange="updateProgress()">
+            <span class="ml-2">បង្កើនតម្លៃតោខិន</span>
+        </label>
+    </div>
+</div>
+
+<!-- Phase 9: Security & Compliance -->
+<div class="phase-card bg-white rounded-lg shadow-lg p-6">
+    <h3 class="text-xl font-bold mb-4 text-orange-600">ដំណាក់កាលទី៩: សុវត្ថិភាព និងការអនុវត្តតាមច្បាប់</h3>
+    
+    <h4 class="text-lg font-semibold mb-2 text-orange-600">ក. សុវត្ថិភាព:</h4>
+    <div class="space-y-2 mb-4">
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-orange-600" onchange="updateProgress()">
+            <span class="ml-2">ធ្វើ Contract Audit</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-orange-600" onchange="updateProgress()">
+            <span class="ml-2">បង្កើត Multisig Wallet</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-orange-600" onchange="updateProgress()">
+            <span class="ml-2">រក្សាសុវត្ថិភាពកូដ</span>
+        </label>
+    </div>
+
+    <h4 class="text-lg font-semibold mb-2 text-orange-600">ខ. តម្លាភាព:</h4>
+    <div class="space-y-2">
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-orange-600" onchange="updateProgress()">
+            <span class="ml-2">ចេញរបាយការណ៍ប្រចាំខែ</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-orange-600" onchange="updateProgress()">
+            <span class="ml-2">បង្ហាញអត្តសញ្ញាណក្រុម</span>
+        </label>
+        <label class="flex items-center">
+            <input type="checkbox" class="form-checkbox text-orange-600" onchange="updateProgress()">
+            <span class="ml-2">ធ្វើតាមច្បាប់និងបទបញ្ញត្តិ</span>
+        </label>
+    </div>
+</div>
         <!-- Budget Calculator -->
         <div class="bg-white rounded-lg shadow-lg p-6 mt-8">
             <h2 class="text-2xl font-bold mb-4">Budget Calculator</h2>
@@ -211,7 +421,7 @@
             </div>
             <div class="mt-4 pt-4 border-t">
                 <h3 class="text-xl font-bold">Total Budget: 
-                    <span id="totalBudget" class="text-purple-600">1040</span> SOL 
+                    <span id="totalBudget" class="text-purple-600">90</span> SOL 
                     <span class="text-gray-600">(≈ $<span id="totalUSDT">0.00</span>)</span>
                 </h3>
             </div>
